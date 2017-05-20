@@ -24,8 +24,8 @@ void consumidor(void *) {
 
 int main(){
     pthread_t prod, cons;
-    sem_init(&cheio, 0, ?);
-    sem_init(&vazio, 0, ?);
+    sem_init(&cheio, 0, 0);
+    sem_init(&vazio, 0, 1);
     pthread_create(&prod, NULL, produtor, NULL);
     pthread_create(&cons, NULL, consumidor, NULL);
     pthread_join(prod, NULL);
