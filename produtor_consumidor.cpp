@@ -1,5 +1,5 @@
 #include <semaphore.h>
-int buffer[1];
+int buffer;
 sem_t cheio,vazio;
 
 void produtor(void *) {
